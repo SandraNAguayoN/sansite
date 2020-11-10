@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Home</title>
+    <%- include('head'); %>
+</head>
+
+<body>
+    <br>
+    <%- include('navbar'); %>
+    <div class="jumbotron">
+        <h1 class="display-4">Clima</h1>
+        <hr class="my-4" style="background:whitesmoke;">
+
+
+        <!--
+        <div id="openweathermap-widget-1"></div>
+        <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+        <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 1, cityid: '4023117', appid: 'c611b8cfac61708273b1c3fcd93fbd69', units: 'metric', containerid: 'openweathermap-widget-1', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();</script>
+
+        <a class="weatherwidget-io" href="https://forecast7.com/es/21d15n100d94/dolores-hidalgo/"
+            data-label_1="Dolores Hidalgo, Gto. Cuna de la Independencia Nacional" data-label_2="Clima"
+            data-icons="Climacons Animated" data-theme="hexellence">Dolores Hidalgo, Gto. Cuna de la Independencia
+            Nacional
+            Clima</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+
+        <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK"
+            data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="blue-mountains">NEW YORK WEATHER</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>-->
+        <hr class="my-4" style="background:whitesmoke;">
+
+        <a class="weatherwidget-io" href="https://forecast7.com/es/21d15n100d94/dolores-hidalgo/"
+            data-label_1="Dolores Hidalgo, Gto. Cuna de la Independencia Nacional" data-label_2="Clima"
+            data-icons="Climacons Animated" data-theme="retro-sky">Dolores Hidalgo, Gto. Cuna de la Independencia
+            Nacional Clima</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+
+        <!--
+        <a class="weatherwidget-io" href="https://forecast7.com/es/21d15n100d94/dolores-hidalgo/"
+            data-label_1="Dolores Hidalgo, Gto. Cuna de la Independencia Nacional" data-label_2="Clima"
+            data-icons="Climacons Animated" data-theme="marine">Dolores Hidalgo, Gto. Cuna de la Independencia Nacional
+            Clima</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ivandiazwm/coinwidget@0.1.1/builds/full.js"
+            charset="utf-8"></script>
+        <div id="coinwidget" data-icon="true" data-type="primary" data-wallet="1Gc317G5YdGm4Mx27RXpaa2vToFQR8J1bt"></div>
+        -->
+        <hr class="my-4" style="background:whitesmoke;">
+        <!--Calculadora de variables-->
+        <script type="text/javascript" id="WolframAlphaScriptd840289ebf37f7ba2f4627ba17bd80aa"
+            src="//www.wolframalpha.com/widget/widget.jsp?id=d840289ebf37f7ba2f4627ba17bd80aa"></script>
+        <!--Estadisticas de clima-->
+        <script type="text/javascript" id="WolframAlphaScript6289ae2f5c1e46be2790fb20d1198937"
+            src="//www.wolframalpha.com/widget/widget.jsp?id=6289ae2f5c1e46be2790fb20d1198937"></script>
+
+            
+            <hr class="my-4" style="background:whitesmoke;">
+
+        <!--<div align="center">
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-df07cf7f-416f-4d67-996b-ee8d595e1b54"></div>
+        </div>-->
+
+    </div>
+
+    <%- include('script'); %>
+    <%- include('footer'); %>
+
+
+</body>
+
+</html>
