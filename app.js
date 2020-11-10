@@ -3,19 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-//var session = require('express-session');
 var InitiateMongoServer = require('./config/db');
 var bodyParser = require('body-parser');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
-//require('./config/passport')(passport);
-
 //Inicia la Base de Datos MongoDB
 InitiateMongoServer();
-app.use(bodyParser.json());//Convierte el dato a formato HSON
+app.use(bodyParser.json());//Convierte el dato a formato JSON
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,14 +24,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-/*app.use(session({
-  secret:'sansiteweb',
-  resave:false,
-  saveUninitialized: false
-}));
-app.use(passport.initialize);
-app.use(passport.session());*/
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

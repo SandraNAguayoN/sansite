@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Home</title>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <br>
+  <%- include('../partials/navbar'); %>
+  <div class="jumbotron" id="geoback">
+    <h1 class="display-4">Tú ubicación</h1>
+    <p class="lead">Ubicación del usuario</p>
+    <hr class="my-4" style="background:rgb(150, 192, 255);">
+    <p>Las coordenadas de tu ubicación son: </p>
+    <!--  Mostrar Mapa leaflet 21.15756, -100.93452-->
+    <label>Latitud: </label>
+    <input id="lat"/>
+    <label>Longitud: </label>
+    <input id="long"/><br><br>
+
+    <div id="mapid" style="height: 600px;"></div>
+  </div>
+  <br>
+  <br>
+  <%- include('../partials/script'); %>
+  <%- include('../partials/footer'); %>
+  <script>
+    window.addEventListener("load", inicio);
+    var observador;
+    function inicio(){
+      //navigator.geolocation.getCurrentPosition(alExito, alError);
+      observador = navigator.geolocation.watchPosition(alExito, alError);
+    }
+    function alExito(info){
+      lat.value = info.coords.latitude;
+      long.value = info.coords.longitude;
+
+    }
+    function alError(error){
+      aler("Hubo un error");
+
+    }
+    function detener(){
+      navigator.geolocation.clearWatch(observador);
+    }
+  </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Home</title>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <br>
+  <%- include('partials/navbaruser'); %>
+  <div class="jumbotron" id=redesback>
+    <h1 class="display-4">Redes Sociales</h1>
+    <hr class="my-4">
+    <p>Sigueme en Pinterest &nbsp;&nbsp;
+      <a data-pin-do="buttonFollow" href="https://www.pinterest.com/saguayonuez/">
+        Sandra Aguayo Nuñez</a></p>
+    <hr class="my-4">
+    <div id="boards" align="center">
+      <a href="https://www.pinterest.com.mx/saguayonuez/lugares/" data-pin-do="embedBoard" data-pin-board-width="400"
+        data-pin-scale-height="640" data-pin-scale-width="300">
+      </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="https://www.pinterest.com.mx/saguayonuez/recetas/" data-pin-do="embedBoard" data-pin-board-width="400"
+        data-pin-scale-height="640" data-pin-scale-width="200">
+      </a></div>
+
+      <hr class="my-4">
+
+      <h5>Comparte mi página &nbsp;&nbsp;&nbsp;&nbsp;
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2FSanSite-112140790692866&layout=button&size=large&appId=355525712353792&width=103&height=28" width="103" height="28" style="border:none;overflow:hidden" 
+      scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></h5>
+      <br>
+      <div id="paginaFacebook" align="center">
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSanSite-112140790692866&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=355525712353792" 
+      width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>
+
+
+
+     
+      
+
+
+ 
+  </div>
+
+
+  <%- include('../partials/script'); %>
+  <%- include('../partials/footer'); %>
+
+</body>
+
+</html>
