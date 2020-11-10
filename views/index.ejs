@@ -13,6 +13,10 @@
     <h1 class="display-4">Bienvenido(a) a mi sitio</h1>
     <p class="lead">Mi nombre es Sandra Aguayo</p>
     <br><br>
+    <div>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div class="elfsight-app-047d2e87-929a-488a-aef4-295d12f04c56"></div>
+    </div>
     <hr class="my-4">
     <div class="container">
       <div id="slider">
@@ -25,19 +29,10 @@
       </div>
     </div>
   </div>
+
   <%- include('partials/script'); %>
   <%- include('partials/footer'); %>
   </div>
-  <script>
-    $(function(){
-    $('#slider div:gt(0)').hide();
-    setInterval(function(){
-        $('#slider div:first-child').fadeOut(1000)
-        .next('div').fadeIn(1000)
-        .end().appendTo('#slider');
-    },4000);
-})
-  </script>
 </body>
 
 </html>

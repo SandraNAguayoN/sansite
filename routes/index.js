@@ -1,28 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+
+router.get('/', function (req, res, next) {
   res.render('index', { page: 'Home', menuId: 'home' });
 });
-
-router.get('/indexuser', function(req, res, next) {
-  res.render('indexuser', { page: 'Homeuser', menuId: 'homeuser' });
-});
-
-router.get('/login', function (req, res, next) {
-  res.render('pages/login', { page: 'Login', menuId: 'login' });
-});
-
 router.get('/signup', function (req, res, next) {
   res.render('pages/signup', { page: 'Signup', menuId: 'signup' });
 });
-
-router.get('/errsignup', function (req, res, next) {
-  res.render('pages/errsignup', { page: 'Errsignup', menuId: 'errsignup' });
-});
-router.get('/errlogin', function (req, res, next) {
-  res.render('pages/errlogin', { page: 'Errlogin', menuId: 'errlogin' });
+router.get('/login', function (req, res, next) {
+  res.render('pages/login', { page: 'Login', menuId: 'login' });
 });
 
 router.get('/ubicacion', function (req, res, next) {
