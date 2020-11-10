@@ -1,0 +1,39 @@
+<!-- views/partials/navbar.ejs -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#61DC95;">
+    <a class="navbar-brand" href="#">Mi Sitio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sronly">(current)</span></a>
+            </li>
+            <li id="apis" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    API's
+                </a>
+                <div id="apismenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Geolocalización</a>
+                    <a class="dropdown-item" href="#">Redes sociales</a>
+                    <a class="dropdown-item" href="#">Ecommerce</a>
+                    <a class="dropdown-item" href="/ubicacion">Ubicación</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Otra</a>
+                </div>
+            </li>
+            <li id="acd" class="nav-item">
+                <a class="nav-link" href="/acercade">Acerca de</a>
+            </li>
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+            </fb:login-button>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" style="background-color:whitesmoke;"
+                type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>
