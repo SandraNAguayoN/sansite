@@ -1,7 +1,7 @@
 <!-- views/partials/navbar.ejs -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#61dcad;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#006e44;">
     <a class="navbar-brand" href="#" style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: italic; font-weight: bolder; color: rgb(87, 65, 97);">SandraSite</a>
+    font-style: italic; font-weight: bolder; color:rgb(255, 255, 255);">SandraSite</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,12 +9,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sronly">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sronly">(Inicio)</span></a>
             </li>
             <li id="apis" class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    API's
+                    aria-haspopup="true" aria-expanded="false"><span style="color: rgb(255, 102, 102);">
+                        API's</span>
                 </a>
                 <div id="apismenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/ubicacion">Geolocalización</a>
@@ -25,17 +25,34 @@
                     <a class="dropdown-item" href="/otra">Otra</a>
                 </div>
             </li>
-            <li id="acd" class="nav-item">
-                <a class="nav-link" href="/acercade">Acerca de</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li id="micro" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><span style="color: rgb(255, 102, 102);">
+                        Microservicios</span>
+                </a>
+                <div id="apismenu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/canciones">Canciones</a>
+                    <a class="dropdown-item" href="/artistas">Artistas</a>
+                    <a class="dropdown-item" href="/generos">Generos</a>
+                    <a class="dropdown-item" href="/libros">Libros</a>
+                </div>
             </li>
-            
+            <li id="acd" class="nav-item">
+                <a class="nav-link" href="/acercade">
+                    <span style="color: rgb(255, 102, 102);">
+                        Acerca de
+                    </span>
+                </a>
+            </li>
+
         </ul>
         <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
         </fb:login-button>-->
-            <button style="width:150px;" class="btn btn-success" onclick="window.location.href='/login'"
+        <button style="width:150px;" class="btn btn-success" onclick="window.location.href='/login'"
             type="submit">Iniciar sesión</button>&nbsp;&nbsp;&nbsp;&nbsp;
-            <button style="width:150px;" class="btn btn-info" onclick="window.location.href='/signup'"
+        <button style="width:150px;" class="btn btn-danger" onclick="window.location.href='/signup'"
             type="submit">Registrarse</button>
-            
+
     </div>
 </nav>

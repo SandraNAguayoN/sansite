@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/styleMicro.css' />
+  <link rel='stylesheet' href='https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css' />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css' />
+  <link rel='stylesheet' href='https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css' />
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div style="width: 100%;">
+    <%- include('../partials/navbar'); %>
+  </div>
+  <div id="contenido">
+    <h1>
+      <%= title %>
+    </h1>
+    <p>Bienvenido al <%= title %>
+    </p>
+    <div class="card">
+      <div class="card-header">
+        <ul class="nav nav-pills w-100">
+          <li class="nav-pill active">
+            <a class="nav-link">Listado de canciones</a>
+          </li>
+          <li class="nav-pill ml-auto">
+            <a class="nav-link active" href="/canciones/add">Agregar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+
+    <table id="tablaCanciones" class="table table-striped table-bordered" style="width:100%">
+      <thead>
+        <tr>
+          <th style="width: 5%;">ID Canción</th>
+          <th style="width: 5%;">Número Canción</th>
+          <th>Título</th>
+          <th>Artista</th>
+          <th style="width: 5%;">Año</th>
+          <th>Autor</th>
+          <th style="width: 5%;">Duración</th>
+          <th>Género</th>
+          <th style="width: 8%;">Editar</th>
+          <th style="width: 5%;">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(data.length> 0){ %>
+
+          <% for (var i=0; i < data.length; i++){ %>
+            <tr>
+              <td style="text-align: center; font-weight: bolder;">
+                <%= data[i]._id%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].NumeroCancion%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].Titulo%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].NumeroArtista%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].Año%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].Autor%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].Duracion%>
+              </td>
+              <td style="text-align: center;">
+                <%= data[i].NumeroGenero%>
+              </td>
+              <td style="text-align: center;">
+                <a class="btn btn-success edit"
+                  href="../canciones/update/<%=data[i].NumeroCancion%>"><span class="fa fa-edit" id="edit"></span></a>
+              </td>
+              <td style="text-align: center;">
+                <a class="btn btn-danger delete"
+                onclick="return confirm('¿Estas seguro que deseas eliminar <%=data[i].Titulo%>?')"
+                href="../canciones/delete/<%=data[i].NumeroCancion%>"><span class="fa fa-trash-o" id="delete"></span></a>
+              </td>
+            </tr>
+            <% } %>
+              <% } %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>ID Canción</th>
+          <th>Número Canción</th>
+          <th>Título</th>
+          <th>Artista</th>
+          <th>Año</th>
+          <th>Autor</th>
+          <th>Duración</th>
+          <th>Género</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+
+  <%- include('../partials/footer'); %>
+    <%- include('../partials/script'); %>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-
+KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integ
+  rity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="
+sha384-
+JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jque
+ry.dataTables.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-
+  KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-
+JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<script src="./javascripts/canciones.js"></script>
+
+</html>

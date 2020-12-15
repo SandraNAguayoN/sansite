@@ -1,3 +1,4 @@
+/* users.js */
 var express = require('express');
 const User = require('../model/user');
 var router = express.Router();
@@ -7,7 +8,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 router.get('/indexuser', function(req, res, next) {
-  res.render('indexuser', { page: 'Homeuser', menuId: 'homeuser' });
+  res.render('/indexuser', { page: 'Homeuser', menuId: 'homeuser' });
 });
 
 router.get('/login', function (req, res, next) {

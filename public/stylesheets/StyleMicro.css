@@ -1,0 +1,161 @@
+body {
+
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background:linear-gradient(30deg, #ADFFE5,#ADFFD1, #D8FFAD, #FFFEAD, #FFC5FE);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #00B7FF;
+  }
+
+  table {
+
+    font-size: 14px;
+  }
+  #tablaCategorias th{
+    text-align: center;
+    background:#00cfcc;
+  }
+  #tablaLibros th {
+    text-align: center;
+    background:#B2E7E6;
+  }
+  #tablaArtistas th {
+    text-align: center;
+    background:#90faf8;
+  }
+  #tablaCanciones th {
+    text-align: center;
+    background:#c7fffe;
+  }
+  #tablaGeneros th {
+    text-align: center;
+    background:#5be4e1;
+  }
+
+  #contenido {
+    padding: 50px;
+  }
+
+  #edit, #delete{
+    font-size: 25px;
+  }
+
+
+
+  a {
+    color: #00B7FF;
+  }
+  .bg-3 {
+    background-color: #ffffff;
+    color: #555555;
+   }
+   .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+   }
+   .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+   }
+   .navbar-nav li a:hover {
+    color: #ffffff !important;
+   }
+   .active>a {
+    color:#ff7373 !important;
+   }
+   #apis, #acd {
+     padding-left: 50px;
+     
+   }
+   #acd{
+     padding-right: 100px;
+   }
+   #apismenu{
+     background-color: #d85c5c;
+   }
+  #twitter{
+    color: #00B7FF;
+  }
+  #mensajeT, #publicacionT{
+    border:1px blue solid;
+  
+  }
+  #formYT { 
+    margin-top: 20px; 
+  }
+  #formYT, #results { 
+    padding: 0 20px; 
+  }
+  .item { 
+    margin-bottom: 25px; 
+  }
+  .w100 { 
+    width: 100%; 
+  }
+  #streamingback{
+    background-color: rgb(1, 0, 61);
+    color:white;
+  }
+  #redesback{
+    background: #FFF7ED;
+  
+  }
+  #boards{
+    background-color: #FFF7ED;
+  }
+  #geoback{
+    background: #2f4e1d;
+    color:white;
+  }
+  
+  #loginback{
+    background-image: url(/images/fondo2.jpg); 
+  
+    background-repeat: no-repeat;
+  }
+  #signupback{
+    background-image: url(/images/fondo3.jpg); 
+  
+    background-repeat: no-repeat;
+  }
+  #yoback{
+    background-image: url(/images/fondo4.jpg); 
+  
+    background-repeat: no-repeat;
+  }
+  #a, #b, #c{
+    border: 5px;
+    padding: 20px;
+    background: white;
+    border-style: dotted solid double dashed ;
+    border-color:  lightgreen rgb(222, 172, 255) lightpink palevioletred ;
+  }
+  
+  #slider{
+    position: relative;
+    width:100%;
+    height:425px;
+    padding:10px;
+    background-color: #690000;
+    margin: 0 auto;
+  }
+  #slider > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #producto1, #producto2, #producto3, #producto4, #producto5{
+    width: 500px;
+  }
+  
+  

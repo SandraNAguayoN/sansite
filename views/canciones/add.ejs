@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/styleMicro.css' />
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css' />
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css' />
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css' />
+</head>
+
+<body>
+    <%- include('../partials/navbar'); %>
+
+        <div id="contenido">
+            <% if(mensaje) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%- mensaje%>
+                </div>
+                <% } %>
+
+                    <div class="card">
+                        <div align="center"
+                            style="font-family:Latin Modern Roman 10; font-style: oblique; font-weight: bold; font-size: 30px;"
+                            class="card-header">Agregar Canción</div>
+                        <div class="card-body">
+                            <form action="/canciones/add" method="post">
+                                <div class="form-group">
+                                    <label>Número Canción: </label>
+                                    <input type="number" class="form-control" name="NumeroCancion"
+                                        value="<%= NumeroCancion %>" autocomplete="off" required>
+                                    <small id="passwordHelpInline" class="text-muted">
+                                        Solo se admiten números
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Titulo:</label>
+                                    <input type="text" class="form-control" name="Titulo" value="<%= Titulo %>"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Artista:</label>
+                                    <select class="form-control" name="NumeroArtista" value="<%= NumeroArtista %>"
+                                        autocomplete="off" required>
+                                        <% for (var i=0; i < datos1.length; i++){ %>
+                                            <option value="<%= datos1[i].NumeroArtista%>">
+                                                <%= datos1[i].Nombres+' '+datos1[i].Apellidos%></option>
+                                            <% } %>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Año:</label>
+                                    <input type="number" class="form-control" name="Año" value="<%= Año %>"
+                                        autocomplete="off" required>
+                                        <small id="passwordHelpInline" class="text-muted">
+                                            Solo se admiten números
+                                        </small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Autor:</label>
+                                    <input type="text" class="form-control" name="Autor" value="<%= Autor %>"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Duración:</label>
+                                    <input type="number" step="any" class="form-control" placeholder="Minutos" name="Duracion" value="<%= Duracion %>"
+                                        autocomplete="off" required>
+                                        <small id="passwordHelpInline" class="text-muted">
+                                            Solo se admiten números con decimal
+                                        </small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Género:</label>
+                                    <select class="form-control" name="NumeroGenero" value="<%= NumeroGenero %>"
+                                        autocomplete="off" required>
+                                            <% for (var i=0; i < datos2.length; i++){ %>
+                                        <option value="<%= datos2[i].NumeroGenero%>"><%= datos2[i].Nombre%></option>
+                                        <% } %>
+                                    </select>
+                                </div>
+                                <br>
+                                <div align="center" class="form-group">
+                                    <input type="submit" class="btn btn-dark" value="Agregar" />
+                                </div>
+                                <div>
+                                    <a class="btn btn-info info" href="/canciones">Regresar</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+        </div>
+
+
+        <br><br><br>
+        <footer align="center" class="footer" style="background-color: thistle; font-size: 20px;">
+            <br>
+            <p>© 2020 El sitio de <b>Sandra Aguayo</b></p>
+            <br>
+        </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-
+KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integ
+    rity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="
+sha384-
+JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jque
+ry.dataTables.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+<script src="./javascripts/canciones.js"></script>
+
+</html>
